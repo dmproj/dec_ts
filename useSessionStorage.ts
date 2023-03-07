@@ -77,7 +77,6 @@ function useSessionStorage<T>(key: string, initialValue: T): [T, SetValue<T>] {
     [key, readValue],
   )
 
-  // this only works for other documents, not the current one
   useEventListener('storage', handleStorageChange)
 
 
