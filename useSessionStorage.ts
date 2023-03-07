@@ -80,8 +80,7 @@ function useSessionStorage<T>(key: string, initialValue: T): [T, SetValue<T>] {
   // this only works for other documents, not the current one
   useEventListener('storage', handleStorageChange)
 
-  // this is a custom event, triggered in writeValueTosessionStorage
-  // See: useSessionStorage()
+
   useEventListener('session-storage', handleStorageChange)
 
   return [storedValue, setValue]
