@@ -96,3 +96,5 @@ function parseJSON<T>(value: string | null): T | undefined {
     return undefined
   }
 }
+
+//types to follow
